@@ -1,0 +1,20 @@
+.FlightInfoTable {
+    width: 100%;
+}
+
+.FlightInfoTable th {
+    text-transform: uppercase;
+    color: #A0B0B9;
+    font-weight: 400;
+}
+
+.FlightInfoTable th,
+.FlightInfoTable td {
+    text-align: left;
+    width: calc(100% / 3);
+}
+
+.FlightInfoTable td {
+    font-weight: 600;
+    color: #4A4A4A;
+}

@@ -1,0 +1,86 @@
+.FilterBlock {
+    width: 235px;
+    padding: 20px;
+    margin-right: 20px;
+    background: #FFFFFF;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.FilterBlock h3 {
+    margin: 0 0 20px 0;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 12px;
+}
+
+.FilterBlock__label {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+}
+
+.FilterBlock__label:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+.FlightBlock__tables > table:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.FlightBlock__price-logo {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.FlightBlock__price-logo img {
+    width: calc(100% /3);
+}
+
+input[type=checkbox] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    opacity: 0;
+}
+
+.FilterBlock__checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 13px;
+    height: 13px;
+    border: 1px solid #9ABBCE;
+    border-radius: 2px;
+}
+
+.FilterBlock__checkmark:hover {
+    cursor: pointer;
+}
+
+.FilterBlock__title {
+    transform: translateX(20px);
+}
+
+.FilterBlock__checkmark:after {
+    left: 4px;
+    top: 0;
+    width: 4px;
+    height: 8px;
+    border: solid #2196F3;
+    border-width: 0 1px 1px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+input:checked ~ .FilterBlock__checkmark:after {
+    display: block;
+}

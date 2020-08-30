@@ -1,0 +1,23 @@
+.Button {
+    padding: 15px;
+    font-size: 12px;
+    text-transform: uppercase;
+    border:  1px solid rgb(170, 170, 170);
+}
+
+.Button:hover {
+    background: #24C5FC;
+    border:  1px solid #24C5FC;
+    color: #ffffff;
+    outline: none;
+}
+
+.Button:focus,
+button.active {
+    background: #2196F3;
+    border:  1px solid #2196F3;
+    color: #ffffff;
+    outline: none;
+}
+
+

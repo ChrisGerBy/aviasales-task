@@ -1,0 +1,13 @@
+.ButtonsFilter {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.ButtonsFilter button {
+    flex: 1 0 auto;
+}
+
+.ButtonsFilter button:not(:last-child) {
+    border-right: none;
+}
