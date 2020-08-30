@@ -79,7 +79,7 @@ class App extends React.Component {
             const stopsLength2 = ticket.segments[1].stops.length;
             const isStopLengthSelected = selectedFiltersNumbers.includes(stopsLength1) && selectedFiltersNumbers.includes(stopsLength2);
 
-            return isStopLengthSelected // && stopsLength1 <= maxStopNumber && stopsLength2 <= maxStopNumber;
+            return isStopLengthSelected;
         } );
 
         this.sortTickets({ tickets: filteredTickets });
@@ -109,7 +109,6 @@ class App extends React.Component {
             newValues = this.transferValues;
         }
     }
-    console.log(newValues)
 
     this.setState({ checkedFiltersValues: newValues }, () => this.filterTickets());
   }

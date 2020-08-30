@@ -24,3 +24,9 @@
     width: calc(100% /3);
     text-align: left;
 }
+
+@media screen and (max-width: 520px) {
+    .TicketCard__ticket {
+        padding: 20px 30px;
+    }
+}

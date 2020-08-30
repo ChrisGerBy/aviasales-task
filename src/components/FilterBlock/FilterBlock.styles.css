@@ -1,12 +1,18 @@
-.FilterBlock {
+.FilterBlock__filters {
     width: 235px;
+    min-width: 160px;
     padding: 20px;
     margin-right: 20px;
     background: #FFFFFF;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-.FilterBlock h3 {
+.FilterBlock__panel, 
+.FilterBlock__cross-icon {
+    display: none;
+}
+
+.FilterBlock__filters h3 {
     margin: 0 0 20px 0;
     text-transform: uppercase;
     font-weight: 600;
@@ -83,4 +89,61 @@ input[type=checkbox] {
 
 input:checked ~ .FilterBlock__checkmark:after {
     display: block;
+}
+
+
+@media screen and (max-width: 730px) {
+    .FilterBlock__filters {
+        width: 100%;
+        max-width: 235px;
+        position: fixed;
+        z-index: 1;
+    }
+
+    .FilterBlock__filters--visible {
+        left: 0;
+    }
+
+    .FilterBlock__filters--hidden {
+        left: -275px;
+    }
+       
+    .FilterBlock__filters--visible,
+    .FilterBlock__filters--hidden {
+        transition: all 0.3s ease-in-out;
+    }
+
+    .FilterBlock__panel {
+        display: block;
+        position: fixed;
+        left: 0;
+        padding: 0;
+        border: 1px solid #2196F3;
+        background: #2196F3;
+        color: #ffffff;
+    }
+
+    .FilterBlock__panel:active, .FilterBlock__panel:focus {
+        outline: none;
+    }
+
+    .FilterBlock__cross-icon {
+        display: block;
+        position: absolute;
+        top: 15px;
+        right: 10px;
+        color: rgb(170, 170, 170);
+    }
+
+    .FilterBlock__cross-icon:hover {
+        color: #000000;
+    }
+
+    .FilterBlock__panel-text {
+        writing-mode: vertical-rl;
+        text-orientation: upright;
+        margin: 0;
+        padding: 3px;
+        text-transform: uppercase;
+    }
 }
