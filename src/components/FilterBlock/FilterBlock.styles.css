@@ -1,149 +1,149 @@
 .FilterBlock__filters {
-    width: 235px;
-    min-width: 160px;
-    padding: 20px;
-    margin-right: 20px;
-    background: #FFFFFF;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  width: 235px;
+  min-width: 160px;
+  padding: 20px;
+  margin-right: 20px;
+  background: #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-.FilterBlock__panel, 
+.FilterBlock__panel,
 .FilterBlock__cross-icon {
-    display: none;
+  display: none;
 }
 
 .FilterBlock__filters h3 {
-    margin: 0 0 20px 0;
-    text-transform: uppercase;
-    font-weight: 600;
-    font-size: 12px;
+  margin: 0 0 20px 0;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 12px;
 }
 
 .FilterBlock__label {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
 }
 
 .FilterBlock__label:not(:last-child) {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .FlightBlock__tables > table:not(:last-child) {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 .FlightBlock__price-logo {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
 }
 
 .FlightBlock__price-logo img {
-    width: calc(100% /3);
+  width: calc(100% / 3);
 }
 
-input[type=checkbox] {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 0;
-    opacity: 0;
+input[type='checkbox'] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  opacity: 0;
 }
 
 .FilterBlock__checkmark {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 13px;
-    height: 13px;
-    border: 1px solid #9ABBCE;
-    border-radius: 2px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 13px;
+  height: 13px;
+  border: 1px solid #9abbce;
+  border-radius: 2px;
 }
 
 .FilterBlock__checkmark:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .FilterBlock__title {
-    transform: translateX(20px);
+  transform: translateX(20px);
 }
 
 .FilterBlock__checkmark:after {
-    left: 4px;
-    top: 0;
-    width: 4px;
-    height: 8px;
-    border: solid #2196F3;
-    border-width: 0 1px 1px 0;
-    -webkit-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    transform: rotate(45deg);
+  left: 4px;
+  top: 0;
+  width: 4px;
+  height: 8px;
+  border: solid #2196f3;
+  border-width: 0 1px 1px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
 
-    content: "";
-    position: absolute;
-    display: none;
+  content: '';
+  position: absolute;
+  display: none;
 }
 
 input:checked ~ .FilterBlock__checkmark:after {
-    display: block;
+  display: block;
 }
 
-
 @media screen and (max-width: 730px) {
-    .FilterBlock__filters {
-        width: 100%;
-        max-width: 235px;
-        position: fixed;
-        z-index: 1;
-    }
+  .FilterBlock__filters {
+    width: 100%;
+    max-width: 235px;
+    position: fixed;
+    z-index: 1;
+  }
 
-    .FilterBlock__filters--visible {
-        left: 0;
-    }
+  .FilterBlock__filters--visible {
+    left: 0;
+  }
 
-    .FilterBlock__filters--hidden {
-        left: -275px;
-    }
-       
-    .FilterBlock__filters--visible,
-    .FilterBlock__filters--hidden {
-        transition: all 0.3s ease-in-out;
-    }
+  .FilterBlock__filters--hidden {
+    left: -275px;
+  }
 
-    .FilterBlock__panel {
-        display: block;
-        position: fixed;
-        left: 0;
-        padding: 0;
-        border: 1px solid #2196F3;
-        background: #2196F3;
-        color: #ffffff;
-    }
+  .FilterBlock__filters--visible,
+  .FilterBlock__filters--hidden {
+    transition: all 0.3s ease-in-out;
+  }
 
-    .FilterBlock__panel:active, .FilterBlock__panel:focus {
-        outline: none;
-    }
+  .FilterBlock__panel {
+    display: block;
+    position: fixed;
+    left: 0;
+    padding: 0;
+    border: 1px solid #2196f3;
+    background: #2196f3;
+    color: #ffffff;
+  }
 
-    .FilterBlock__cross-icon {
-        display: block;
-        position: absolute;
-        top: 15px;
-        right: 10px;
-        color: rgb(170, 170, 170);
-    }
+  .FilterBlock__panel:active,
+  .FilterBlock__panel:focus {
+    outline: none;
+  }
 
-    .FilterBlock__cross-icon:hover {
-        color: #000000;
-    }
+  .FilterBlock__cross-icon {
+    display: block;
+    position: absolute;
+    top: 15px;
+    right: 10px;
+    color: rgb(170, 170, 170);
+  }
 
-    .FilterBlock__panel-text {
-        writing-mode: vertical-rl;
-        text-orientation: upright;
-        margin: 0;
-        padding: 3px;
-        text-transform: uppercase;
-    }
+  .FilterBlock__cross-icon:hover {
+    color: #000000;
+  }
+
+  .FilterBlock__panel-text {
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    margin: 0;
+    padding: 3px;
+    text-transform: uppercase;
+  }
 }

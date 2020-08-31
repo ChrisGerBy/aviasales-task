@@ -1,7 +1,9 @@
 # Aviasales test task
+
 **Task**: [https://github.com/KosyanMedia/test-tasks/tree/master/aviasales_frontend](https://github.com/KosyanMedia/test-tasks/tree/master/aviasales_frontend)
 
 **Result**: [https://chrisgerby.github.io/aviasales-task/](https://chrisgerby.github.io/aviasales-task/)
+
 ## Available Scripts
 
 In the project directory, you can run:
@@ -40,4 +42,5 @@ Instead, it will copy all the configuration files and the transitive dependencie
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
 ### `yarn deploy`
+
 Deploys project to gh-pages available under the url [https://chrisgerby.github.io/aviasales-task/](https://chrisgerby.github.io/aviasales-task/)

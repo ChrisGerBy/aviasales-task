@@ -3,7 +3,7 @@ body {
   font-family: 'Open Sans', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: #E5E5E5;
+  background: #e5e5e5;
   font-size: 12px;
 }
 
@@ -12,7 +12,8 @@ code {
     monospace;
 }
 
-button:hover, a:hover,
-input[type=checkbox]{
+button:hover,
+a:hover,
+input[type='checkbox'] {
   cursor: pointer;
 }
