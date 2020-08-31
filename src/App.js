@@ -64,7 +64,11 @@ class App extends React.Component {
 
       return 0;
     });
-    this.setState({ displayedTickets: sortedTickets, isDataLoading: false });
+
+    setTimeout(() => {
+      this.setState({ displayedTickets: sortedTickets, isDataLoading: false });
+
+    }, 1000);
   };
 
   filterTickets() {
@@ -95,8 +99,10 @@ class App extends React.Component {
 
   handleChangeButtonFilter = (value) => {
     const { displayedTickets } = this.state;
+    this.setState({ displayedTickets: [], isDataLoading: true });
+
     this.setState({ selectedFilter: value }, () =>
-      this.sortTickets({ tickets: displayedTickets })
+        this.sortTickets({ tickets: displayedTickets })
     );
   };
 
@@ -143,7 +149,7 @@ class App extends React.Component {
 
     return (
       <div className="App">
-        <LogoIcon />
+        <LogoIcon className={`App__logo ${isDataLoading ? 'App__logo--blink' : ''}`} />
         <div className={'App__content'}>
           <FilterBlock
             filters={Object.values(transferFilter.items)}
@@ -157,6 +163,7 @@ class App extends React.Component {
               selectedFilter={selectedFilter}
               onButtonClick={this.handleChangeButtonFilter}
             />
+            {isDataLoading && <div className={'App__spinner'} />}
             {!isDataLoading && !displayedTickets.length ? (
               <p>Билеты не найдены</p>
             ) : (
